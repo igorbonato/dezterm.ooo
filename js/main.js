@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function showResult() {
       const finalResultEl = document.getElementById("final-score");
-      finalResultEl.textContent = "Wordlee 1 - You win!";
+      finalResultEl.textContent = "DEZTERMO 1 - You win!";
   
       const totalWins = window.localStorage.getItem("totalWins") || 0;
       window.localStorage.setItem("totalWins", Number(totalWins) + 1);
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function showLosingResult() {
       const finalResultEl = document.getElementById("final-score");
-      finalResultEl.textContent = `Wordle 1 - Unsuccessful Today!`;
+      finalResultEl.textContent = `DEZTERMO 1 - Unsuccessful Today! as palavras eram ${currentWord }.`;
   
       window.localStorage.setItem("currentStreak", 0);
     }
@@ -310,11 +310,14 @@ document.addEventListener("DOMContentLoaded", () => {
           }, index * interval);
         });
         
-        for (let tabuleiro = 0; tabuleiro < total_boards.length; tabuleiro++) {
+        setTimeout(() => {
+          for (let tabuleiro = 0; tabuleiro < total_boards.length; tabuleiro++) {
           if (total_boards[tabuleiro].palavra === guessedWord) {
             total_boards[tabuleiro].encerrado = true;
           };
         };
+        }, 1200);
+        
 
         guessedWordCount += 1;
         window.localStorage.setItem("guessedWordCount", guessedWordCount);
@@ -339,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (guessedWords.length === 20 && !(currentWord.every(word => allwords.includes(word)))) {
           setTimeout(() => {
             const okSelected = window.confirm(
-              `dsclp, acabaram suas chances! as palavras eram ${currentWord}.`
+              `dsclp, acabaram suas chances! as palavras eram ${currentWord }.`
             );
             if (okSelected) {
               clearBoard();
@@ -466,4 +469,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
+    document.addEventListener ('keydown', (event) => {
+      const keyName = event.key;
+      if (keyName === "Enter") {
+        handleSubmitWord();
+        return;
+      }
+  
+      if (keyName === "Backspace") {
+        handleDelete();
+        return;
+      }
+      if (['a','b','c','d','e','f','g','h','i','j','k','l','m','n',
+      'o','p','q','r','s','t','u','v','x','w','y','z'].includes(keyName.toLowerCase())){
+      updateGuessedLetters(keyName.toLowerCase())
+      }
+    });
   });
