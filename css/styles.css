@@ -74,6 +74,7 @@ header {
 	transform: translate(50%, -50%);
 	z-index: 3;
 	padding: 10px;
+	font-size: 35px;
 }
 
 .board {
@@ -238,4 +239,10 @@ header {
 
 .hidden {
 	display: none;
+}
+
+.resp-certas {
+	display: inline-block;
+	margin-inline: 5px;
+	margin-block: 5px;
 }

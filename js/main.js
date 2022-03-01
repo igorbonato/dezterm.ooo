@@ -174,8 +174,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function showLosingResult() {
       const finalResultEl = document.getElementById("final-score");
-      finalResultEl.textContent = `DEZTERMO - Unsuccessful Today! as palavras eram ${currentWord }.`;
-  
+      finalResultEl.textContent = `DEZTERMO - Unsuccessful Today! as palavras eram:`;
+      currentWord.forEach(element => {
+        let palavra = document.createElement("p")
+        palavra.textContent = element  + ","
+        palavra.classList.add("resp-certas")
+        finalResultEl.appendChild(palavra)
+      })
       window.localStorage.setItem("currentStreak", 0);
     }
   
