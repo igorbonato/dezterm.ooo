@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("./dicio2.txt")
     .then(response => response.text())
     .then((text) => {
-    arr = text.split("\r\n");
+    arr = text.split("\n");
     console.log(arr)
     })
 
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     function showLosingResult() {
       const finalResultEl = document.getElementById("final-score");
-      finalResultEl.textContent = `DEZTERMO 1 - Unsuccessful Today! as palavras eram ${currentWord }.`;
+      finalResultEl.textContent = `DEZTERMO - Unsuccessful Today! as palavras eram ${currentWord }.`;
   
       window.localStorage.setItem("currentStreak", 0);
     }
@@ -301,7 +301,9 @@ document.addEventListener("DOMContentLoaded", () => {
               }
   
               const keyboardEl = document.querySelector(`[data-key=${letter}]`);
-              keyboardEl.classList.add(tileClass[0]);
+              if (tileClass.every(elemen => elemen === "incorrect-letter")) {
+                keyboardEl.classList.add(tileClass[0]);
+              }
             }
   
             if (index === 4) {
