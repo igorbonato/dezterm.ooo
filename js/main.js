@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let availableSpace = 1;
     let guessedWords = [[]];
 
-    window.localStorage.clear()
+    //window.localStorage.clear()
     
     let arr;
     
     fetch("./dicio2.txt")
     .then(response => response.text())
     .then((text) => {
-    arr = text.split("\r\n");
+    arr = text.split("\n");
     console.log(arr)
     })
 
