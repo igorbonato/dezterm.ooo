@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let availableSpace = 1;
     let guessedWords = [[]];
 
-    //window.localStorage.clear()
+    window.localStorage.clear()
     
     let arr;
     
