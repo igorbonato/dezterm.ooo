@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch("./dicio2.txt")
     .then(response => response.text())
     .then((text) => {
-    arr = text.split("\n");
+    arr = text.split("\r\n");
     console.log(arr)
     })
 
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     
-    const words = [["vinho", "scott", "sitio", "vacas", "ufrgs", "morte", "gatos", "buffon", "rocha", "porto"],
+    const words = [["tempo", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["tempo", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["vinho", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["vinho", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
