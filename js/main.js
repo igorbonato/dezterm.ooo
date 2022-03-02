@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let availableSpace = 1;
     let guessedWords = [[]];
 
-    //window.localStorage.clear()
+    window.localStorage.clear()
     
     let arr;
     
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     
-    const words = [["tempo", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
+    const words = [["vinho", "scott", "sitio", "vacas", "ufrgs", "morte", "gatos", "tenda", "rocha", "porto"],
                    ["tempo", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["vinho", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["vinho", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
