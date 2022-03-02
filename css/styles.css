@@ -94,8 +94,8 @@ header {
 .square {
 	border: 1px solid rgb(58, 58, 60);
 	display: inline-block;
-	min-width: 30px;
-	min-height: 30px;
+	/*min-width: 30px;
+	min-height: 30px; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -114,6 +114,7 @@ header {
 	color: gainsboro;
 	text-transform: uppercase;
 	user-select: none;
+	aspect-ratio: 1;
 }
 
 .square.incorrect-letter {
@@ -157,9 +158,9 @@ header {
 	font-family: inherit;
 	font-weight: bold;
 	border: 0;
-	padding: 0;
+	padding: 2px;
 	margin-right: 5px;
-	height: 58px;
+	/* height: 58px; */
 	border-radius: 4px;
 	cursor: pointer;
 	user-select: none;
