@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     
-    const words = [["vinho", "scott", "sitio", "vacas", "ufrgs", "morte", "gatos", "tenda", "rocha", "porto"],
+    const words = [["sofre", "ansia", "odiar", "banzo", "filme", "vodka", "depre", "grito", "chora", "uivar"],
                    ["tempo", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["vinho", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["vinho", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function createSquares(i) {
       const gameBoard = document.getElementById(`board_${i}`);
   
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 75; i++) {
         let square = document.createElement("div");
         square.classList.add("animate__animated");
         square.classList.add("square");
@@ -185,11 +185,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     function clearBoard() {
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 75; i++) {
         let square = document.getElementsByClassName(i + 1);
         for (let j = 0; j < square.length; j++) {
           square[j].textContent = "";
-          if (i < 50) {
+          if (i < 40) {
             square[j].style.backgroundColor = "rgb(0, 91, 187)";
             square[j].style.borderColor = "rgb(0, 91, 187)";
           } else {
@@ -346,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }, 1200);
         }
   
-        if (guessedWords.length === 20 && !(currentWord.every(word => allwords.includes(word)))) {
+        if (guessedWords.length === 15 && !(currentWord.every(word => allwords.includes(word)))) {
           setTimeout(() => {
             const okSelected = window.confirm(
               `dsclp, acabaram suas chances! as palavras eram ${currentWord }.`
