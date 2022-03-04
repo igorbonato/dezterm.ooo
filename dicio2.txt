@@ -1813,6 +1813,12 @@ silex
 silfo
 silvo
 simio
+gauss
+excel
+anova
+grafo
+bayes
+gibbs
 sinal
 sinha
 sinho

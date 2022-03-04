@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     
-    const words = [["sofre", "ansia", "odiar", "banzo", "filme", "vodka", "depre", "grito", "chora", "uivar"],
+    const words = [["gauss", "curva", "alpha", "excel", "saque", "grafo", "gibbs", "anova", "zerar", "bayes"],
                    ["tempo", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["vinho", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
                    ["vinho", "corpo", "sitio", "vacas", "comer", "carne", "holly", "arroz", "lebre", "porta"],
