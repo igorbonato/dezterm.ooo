@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>10TERMO</title>
-    <link rel="icon" href="iconflag.png">
+    <link rel="icon" href="img/iconflag.png">
     <script src="js/main.js"></script>
+
+    <script src="js/clipboard.min.js">
+    </script>
+
+    <script 
+    src= "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js">
+    </script>
 
     <script
       src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -28,7 +35,7 @@
           <i class="fas fa-chart-bar" id="stats"></i>
         </header>
         <div id="board-container">
-			<h2 id="final-score"></h2>
+			      
         </div>
         <div id="keyboard-container">
           <div class="keyboard-row">
@@ -79,6 +86,26 @@
         </div>
       </div>
 
+      <div id="game-results">
+        <span class="close" id="close-result">&times;</span>
+        <h2 id="final-score"></h2>
+        <div id="sendlove">
+          <button class="svg-wrapper-1">
+            <div class="svg-wrapper-2">
+              <div class="svg-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                </svg>
+              </div>
+            </div>
+            <span>Share</span>
+          </button>
+          <img id="screenshot" src="" alt="">
+        </div>
+       
+      </div> 
+
       <div id="help-modal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
@@ -94,7 +121,7 @@
             PRAY FOR UKRAINE
           </p>
 
-          <img src="flag.png" id="examples" />
+          <img src="img/flag.png" id="examples" />
 
           <hr />
           <p>lalalalala</p>
