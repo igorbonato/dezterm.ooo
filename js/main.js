@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 
 			if (
-				guessedWords.length === 3 &&
+				guessedWords.length === 15 &&
 				!currentWord.every((word) => allwords.includes(word))
 			) {
 				setTimeout(() => {
