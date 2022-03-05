@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	let arr;
 
-	fetch("dicts/dicio3.txt")
+	fetch("dicts/dicio2.txt")
 		.then((response) => response.text())
 		.then((text) => {
-			arr = text.split("\n");
+			arr = text.split("\r\n");
 			console.log(arr);
 		});
 
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	function createSquares(i) {
 		const gameBoard = document.getElementById(`board_${i}`);
 
-		for (let i = 0; i < 90; i++) {
+		for (let i = 0; i < 75; i++) {
 			let square = document.createElement("div");
 			square.classList.add("animate__animated");
 			square.classList.add("square");
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	function updateGuessedLetters(letter) {
 		const currentWordArr = getCurrentWordArr();
 
-		if (currentWordArr && currentWordArr.length < 6) {
+		if (currentWordArr && currentWordArr.length < 5) {
 			currentWordArr.push(letter);
 
 			const availableSpaceEl = document.getElementsByClassName(availableSpace);
@@ -298,11 +298,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	function clearBoard() {
-		for (let i = 0; i < 90; i++) {
+		for (let i = 0; i < 75; i++) {
 			let square = document.getElementsByClassName(i + 1);
 			for (let j = 0; j < square.length; j++) {
 				square[j].textContent = "";
-				if (i < 48) {
+				if (i < 40) {
 					square[j].style.backgroundColor = "rgb(0, 91, 187)";
 					square[j].style.borderColor = "rgb(0, 91, 187)";
 				} else {
@@ -399,12 +399,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		const currentWordArr = getCurrentWordArr();
 		const guessedWord = currentWordArr.join("");
 
-		if (guessedWord.length !== 6) {
+		if (guessedWord.length !== 5) {
 			return;
 		}
 
 		if (arr.includes(guessedWord)) {
-			const firstLetterId = guessedWordCount * 6 + 1;
+			const firstLetterId = guessedWordCount * 5 + 1;
 
 			localStorage.setItem("availableSpace", availableSpace);
 
@@ -467,7 +467,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 
 			if (
-				guessedWords.length === 3 &&
+				guessedWords.length === 15 &&
 				!currentWord.every((word) => allwords.includes(word))
 			) {
 				setTimeout(() => {
@@ -679,6 +679,5 @@ document.addEventListener("DOMContentLoaded", () => {
 		const response = await fetch(urlFake);
 		const blob = await response.blob();
 		await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
-		window.alert("copiado para Área de Trabalho");
 	}
 });
