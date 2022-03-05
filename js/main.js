@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	fetch("dicts/dicio2.txt")
 		.then((response) => response.text())
 		.then((text) => {
-			arr = text.split("\n");
+			arr = text.split("\r\n");
 			console.log(arr);
 		});
 
@@ -609,7 +609,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			gameResults.style.display = "none";
 		});
 
-		copyButton[0].addEventListener("click", copyImage());
+		copyButton[0].addEventListener("click", copyImage);
 	}
 
 	document.addEventListener("keydown", (event) => {
