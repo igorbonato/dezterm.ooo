@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	fetch("dicts/dicio2.txt")
 		.then((response) => response.text())
 		.then((text) => {
-			arr = text.split("\r\n");
+			arr = text.split("\n");
 			console.log(arr);
 		});
 
