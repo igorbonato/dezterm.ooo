@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	let arr;
 
-	fetch("dicts/dicio2.txt")
+	fetch("dicts/dicio3.txt")
 		.then((response) => response.text())
 		.then((text) => {
-			arr = text.split("\r\n");
+			arr = text.split("\n");
 			console.log(arr);
 		});
 
@@ -26,16 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const words = [
 		[
-			"chima",
-			"afude",
-			"polar",
-			"berga",
-			"xucro",
-			"butia",
-			"cusco",
-			"taura",
-			"baita",
-			"capaz",
+			"grazie",
+			"buffon",
+			"venice",
+			"queijo",
+			"favore",
+			"grappa",
+			"giorno",
+			"pastas",
+			"salame",
+			"bonato",
 		],
 		[
 			"tempo",
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	function createSquares(i) {
 		const gameBoard = document.getElementById(`board_${i}`);
 
-		for (let i = 0; i < 75; i++) {
+		for (let i = 0; i < 90; i++) {
 			let square = document.createElement("div");
 			square.classList.add("animate__animated");
 			square.classList.add("square");
@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	function updateGuessedLetters(letter) {
 		const currentWordArr = getCurrentWordArr();
 
-		if (currentWordArr && currentWordArr.length < 5) {
+		if (currentWordArr && currentWordArr.length < 6) {
 			currentWordArr.push(letter);
 
 			const availableSpaceEl = document.getElementsByClassName(availableSpace);
@@ -298,19 +298,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	function clearBoard() {
-		for (let i = 0; i < 75; i++) {
+		for (let i = 0; i < 90; i++) {
 			let square = document.getElementsByClassName(i + 1);
 			for (let j = 0; j < square.length; j++) {
 				square[j].textContent = "";
-				if (i < 25) {
-					square[j].style.backgroundColor = "rgb(0, 171, 78)";
-					square[j].style.borderColor = "rgb(0, 171, 78)";
-				} else if (i > 24 && i < 50) {
-					square[j].style.backgroundColor = "rgb(238, 49, 47)";
-					square[j].style.borderColor = "rgb(238, 49, 47)";
+				if (i < 30) {
+					square[j].style.backgroundColor = "rgb(0, 140, 69)";
+					square[j].style.borderColor = "rgb(0, 140, 69)";
+				} else if (i > 29 && i < 60) {
+					square[j].style.backgroundColor = "rgb(244, 245, 240)";
+					square[j].style.borderColor = "rgb(244, 245, 240)";
 				} else {
-					square[j].style.backgroundColor = "rgb(255, 203, 5)";
-					square[j].style.borderColor = "rgb(255, 203, 5)";
+					square[j].style.backgroundColor = "rgb(205, 33, 42)";
+					square[j].style.borderColor = "rgb(205, 33, 42)";
 				}
 			}
 		}
@@ -402,12 +402,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		const currentWordArr = getCurrentWordArr();
 		const guessedWord = currentWordArr.join("");
 
-		if (guessedWord.length !== 5) {
+		if (guessedWord.length !== 6) {
 			return;
 		}
 
 		if (arr.includes(guessedWord)) {
-			const firstLetterId = guessedWordCount * 5 + 1;
+			const firstLetterId = guessedWordCount * 6 + 1;
 
 			localStorage.setItem("availableSpace", availableSpace);
 
@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			if (currentWord.every((word) => allwords.includes(word))) {
 				setTimeout(() => {
 					const okSelected = window.confirm(
-						"boa tchê! tri legal, agora clica no OK porra 😡😡"
+						"CUDIU! otimas raizes italianas! 🍕🍕"
 					);
 					if (okSelected) {
 						takeshot();
@@ -684,5 +684,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		const response = await fetch(urlFake);
 		const blob = await response.blob();
 		await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
+		window.alert("copiado para Área de Trabalho");
 	}
 });
