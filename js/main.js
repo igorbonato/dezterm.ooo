@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			"queijo",
 			"favore",
 			"grappa",
-			"giorno",
+			"colono",
 			"pastas",
 			"salame",
 			"bonato",
