@@ -303,14 +303,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			for (let j = 0; j < square.length; j++) {
 				square[j].textContent = "";
 				if (i < 30) {
-					square[j].style.backgroundColor = "rgb(0, 140, 69)";
-					square[j].style.borderColor = "rgb(0, 140, 69)";
+					square[j].style.backgroundColor = "rgb(255, 105, 180)";
+					square[j].style.borderColor = "rgb(255, 105, 180)";
 				} else if (i > 29 && i < 60) {
-					square[j].style.backgroundColor = "rgb(244, 245, 240)";
-					square[j].style.borderColor = "rgb(244, 245, 240)";
+					square[j].style.backgroundColor = "rgb(255, 105, 180)";
+					square[j].style.borderColor = "rgb(255, 105, 180)";
 				} else {
-					square[j].style.backgroundColor = "rgb(205, 33, 42)";
-					square[j].style.borderColor = "rgb(205, 33, 42)";
+					square[j].style.backgroundColor = "rgb(255, 105, 180)";
+					square[j].style.borderColor = "rgb(255, 105, 180)";
 				}
 			}
 		}
