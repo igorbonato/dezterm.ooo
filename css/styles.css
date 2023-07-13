@@ -133,8 +133,8 @@ header {
 }
 
 .square.correct-letter-in-place {
-	background-color: rgb(0, 91, 187);
-	border-color: rgb(0, 91, 187);
+	background-color: rgb(255, 105, 180);
+	border-color: rgb(255, 105, 180);
 }
 
 @media only screen and (max-width: 400px) {
@@ -191,7 +191,7 @@ header {
 }
 
 .keyboard-row button.correct-letter-in-place {
-	background-color: rgb(0, 91, 187);
+	background-color: rgb(255, 105, 180);
 }
 
 .spacer-half {
