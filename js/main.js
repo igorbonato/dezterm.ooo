@@ -26,16 +26,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const words = [
 		[
-			"grazie",
-			"buffon",
-			"venice",
-			"queijo",
-			"favore",
-			"grappa",
-			"colono",
-			"pastas",
-			"salame",
-			"bonato",
+			"barbie",
+			"ventos",
+			"viumaa",
+			"barata",
+			"horror",
+			"gremio",
+			"rocker",
+			"umidez",
+			"orange",
+			"county",
 		],
 		[
 			"tempo",
