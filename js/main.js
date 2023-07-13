@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		[
 			"barbie",
 			"ventos",
-			"viumaa",
+			"bahuma",
 			"barata",
 			"horror",
 			"gremio",
@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function showResult() {
 		const finalResultEl = document.getElementById("final-score");
-		finalResultEl.textContent = "DEZTERMO 1 - You win!";
+		finalResultEl.textContent = "DEZTERMO 1 - You win barbie girl!";
 
 		const totalWins = window.localStorage.getItem("totalWins") || 0;
 		window.localStorage.setItem("totalWins", Number(totalWins) + 1);
@@ -287,7 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function showLosingResult() {
 		const finalResultEl = document.getElementById("final-score");
-		finalResultEl.textContent = `DEZTERMO - Unsuccessful Today! as palavras eram:`;
+		finalResultEl.textContent = `DEZTERMO - Unsuccessful Today barbie, as palavras eram:`;
 		currentWord.forEach((element) => {
 			let palavra = document.createElement("p");
 			palavra.textContent = element + ",";
